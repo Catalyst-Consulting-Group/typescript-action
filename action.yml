@@ -1,0 +1,20 @@
+name: todo-action
+description: TODO
+author: TODO
+
+branding:
+  icon: cpu
+  color: orange
+
+inputs:
+  foo-input:
+    description: TODO
+    required: true
+
+outputs:
+  foo-output:
+    description: TODO
+
+runs:
+  using: node16
+  main: dist/index.js
