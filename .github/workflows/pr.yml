@@ -13,7 +13,22 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version-file: ".node-version"
+          node-version-file: '.node-version'
 
       - run: npm ci
       - run: npm test
+
+      - run: |
+          npm run build
+          npm run package
+
+      - id: changes
+        uses: tj-actions/verify-changed-files@v16
+        with:
+          files: 'dist/*'
+
+      - uses: actions/github-script@v3
+        if: ${{ steps.changes.outputs.files_changed == 'true' }}
+        with:
+          script: |
+            core.setFailed("The distributable action code is out of sync with the source code. Run 'npm run test-build-package'.")
