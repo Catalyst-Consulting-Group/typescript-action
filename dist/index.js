@@ -37,7 +37,7 @@ function run() {
     }
     catch (e) {
         core.setOutput('task-error', 'baz');
-        core.setFailed('oops');
+        core.setFailed('something went really wrong here');
     }
 }
 run();
