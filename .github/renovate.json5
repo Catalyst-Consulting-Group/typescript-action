@@ -1,21 +1,4 @@
-// Please see https://docs.renovatebot.com/configuration-options for more information on Renovate configuration options
 {
   $schema: 'https://docs.renovatebot.com/renovate-schema.json',
-  extends: ['github>Catalyst-Consulting-Group/renovate-config'],  
-  packageRules: [
-    // Silence updates for dotnet-sdk (global.json file)
-    {
-      matchPackageNames: [
-        "dotnet-sdk",
-      ],
-      enabled: false,
-    },
-    // Everything in contrib is considered "read-only" and will not be updated automatically
-    {
-      matchFileNames: [
-        "contrib/**"
-      ],
-      enabled: false,
-    },
-  ],
+  extends: ['github>Catalyst-Consulting-Group/renovate-config'],
 }
