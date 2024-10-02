@@ -12,5 +12,10 @@
       matchUpdateTypes: ['major'],
       enabled: false,
     },
+    // We will manually handle ncc updates
+    {
+      matchPackageNames: ['@vercel/ncc'],
+      enabled: false,
+    },
   ],
 }
