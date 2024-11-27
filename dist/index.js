@@ -46,8 +46,9 @@ function run() {
         core.setOutput('foo-output', 'foo');
     }
     catch (e) {
+        const message = e instanceof Error ? e.message : 'oops';
         core.setOutput('task-error', 'baz');
-        core.setFailed('oops');
+        core.setFailed(message);
     }
 }
 run();
