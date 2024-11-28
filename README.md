@@ -13,13 +13,11 @@ TODO
 # Inputs
 
 | Name      | Description |
-|-----------|-------------|
+| --------- | ----------- |
 | foo-input | bar         |
 
 # Outputs
 
-# Inputs
-
 | Name       | Description |
-|------------|-------------|
+| ---------- | ----------- |
 | foo-output | baz         |
